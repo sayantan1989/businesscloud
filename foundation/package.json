@@ -18,7 +18,8 @@
         "build": "npm-run-all --sequential clean tsc",
         "clean": "rimraf ./report ./dist ./.nyc_output ./.tmp",
         "tsc": "tsc",
-        "test": "NODE_ENV=test mocha --exit  -r ts-node/register test/**/*.ts"
+        "test": "NODE_ENV=test mocha --exit  -r ts-node/register test/**/*.ts",
+        "scan": "cross-env trivy repo --scanners secret --format json --output report.json ."
     },
     "dependencies": {
         "@elastic/elasticsearch": "^8.17.0",
