@@ -17,3 +17,8 @@
 
 #dummy
 /dummy
+
+# environment files
+.env
+.env.*.local
+report.json

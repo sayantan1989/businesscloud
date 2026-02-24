@@ -1,4 +1,4 @@
-// ❌ BAD PRACTICE: Hardcoded secrets
+
 const AWS_ACCESS_KEY_ID = "AKIAIMORHT6EXAMPLE"; // Trivy recognizes the AKIA pattern
 const AWS_SECRET_ACCESS_KEY = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY";
 
