@@ -52,7 +52,7 @@
         "@istanbuljs/nyc-config-typescript": "^1.0.2",
         "@types/chai": "^4.3.20",
         "@types/express": "^5.0.6",
-        "@types/fetch-mock": "^7.3.5",
+        "@types/fetch-mock": "^9.0.0",
         "@types/lodash": "^4.17.24",
         "@types/minimist": "^1.2.5",
         "@types/mocha": "^10.0.10",
