@@ -35,7 +35,7 @@
         "elasticsearch": "^16.7.3",
         "express": "^4.16.0",
         "fs": "^0.0.1-security",
-        "google-protobuf": "^3.21.2",
+        "google-protobuf": "^4.0.0",
         "install": "^0.13.0",
         "lodash": "^4.17.23",
         "minimist": "^1.2.8",
