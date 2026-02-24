@@ -6,7 +6,7 @@
       "If no issues are found, exit the process else continue",
       "Create a new branch for the run, pull and rebase if needed",
       "collect issues related to secret and make the changes locally first",
-      "Run the available tool from scan-tools to verify if issues is resolved",
+      "Run the available tool from scan-tools to verify if issues is resolved. pass repoUrl and branch name as params to the tool. if fails ignore and continue",
       "Run tests, If tests pass continue else fix the issues and run tests again",
       "Commit changes",
       "If possible create test cases for the changes made in src files",
