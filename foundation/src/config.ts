@@ -1,15 +1,17 @@
+/* Centralized configuration: load secrets from environment variables.
+   Do NOT hardcode secrets in source code. */
+import 'dotenv/config';
 
-const AWS_ACCESS_KEY_ID = "AKIAIMORHT6EXAMPLE"; // Trivy recognizes the AKIA pattern
-const AWS_SECRET_ACCESS_KEY = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY";
+export const AWS_ACCESS_KEY_ID = process.env.AWS_ACCESS_KEY_ID;
+export const AWS_SECRET_ACCESS_KEY = process.env.AWS_SECRET_ACCESS_KEY;
 
 export const githubConfig = {
-  // Trivy identifies GitHub Personal Access Tokens
-  token: "ghp_J9s8d7f6g5h4j3k2l1m0n9o8p7q6r5s4t3u2", 
-  owner: "my-org"
+  token: process.env.GITHUB_TOKEN,
+  owner: process.env.GITHUB_OWNER,
 };
 
-async function connectToDb() {
-  // Trivy flags connection strings with passwords
-  const dbUrl = "postgres://admin:p@ssword123@localhost:5432/mydb";
+export async function connectToDb() {
+  // Use DATABASE_URL from environment (e.g., postgres://user:pass@host:port/db)
+  const dbUrl = process.env.DATABASE_URL;
   return dbUrl;
 }
