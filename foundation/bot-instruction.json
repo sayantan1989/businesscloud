@@ -2,17 +2,18 @@
   "description": "Instruction for any code agents",
   "instruction": {
     "steps": [
-      "Run the tool foundation/tools/trivy-scan.sh to generate report.json in the directory /foundation, wait till the scan is complete",
-      "Read report.json",
+      "Run the file report.json to read the latest scan report",
+      "if not action exit else continue",
       "create a new branch for the run, pull and rebase if needed",
       "collect issues related to secret and make the changes locally first",
+      "Run the available tool from scan-tools to verify if issues is resolved",
       "Run tests",
       "If tests pass create new branch",
       "Commit changes",
       "If possible create test cases for the changes made",
       "Commit changes",
       "Push branch",
-      "Create PR"
+      "Create PR with details of the changes made and title with format BUSINESSCLOUD: <brief description of the fix>"
     ]
   }
 }
