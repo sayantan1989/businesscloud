@@ -1,0 +1,14 @@
+{
+  "description": "Instruction for any code agents",
+  "instruction": {
+    "steps": [
+      "Read report.json",
+      "collect issues related to secret and make the changes locally first",
+      "Run tests",
+      "If tests pass create new branch",
+      "Commit changes",
+      "Push branch",
+      "Create PR"
+    ]
+  }
+}
