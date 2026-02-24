@@ -61,7 +61,7 @@
         "@types/pg": "^8.11.13",
         "@types/sinon": "^10.0.18",
         "@types/supertest": "^6.0.3",
-        "@types/uuid": "^10.0.0",
+        "@types/uuid": "^11.0.0",
         "@typescript-eslint/eslint-plugin": "^8.56.1",
         "@typescript-eslint/parser": "^8.56.1",
         "chai": "^4.5.0",
