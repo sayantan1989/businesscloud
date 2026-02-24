@@ -3,6 +3,7 @@
   "instruction": {
     "steps": [
       "Read report.json",
+      "create a new branch for the run, pull and rebase if needed",
       "collect issues related to secret and make the changes locally first",
       "Run tests",
       "If tests pass create new branch",
