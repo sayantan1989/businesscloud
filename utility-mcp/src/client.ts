@@ -46,7 +46,7 @@ async function main() {
       try {
         const result = await client.callTool({
           name: "runTrivvyScan",
-          arguments: { repoUrl: "https://github.com/sayantan1989/businesscloud" },
+          arguments: { repoUrl: "https://github.com/sayantan1989/businesscloud", branch: "chore/remove-hardcoded-secrets" },
         });
 
         const resultText = (result as any).content
