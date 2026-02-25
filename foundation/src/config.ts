@@ -1,15 +1,20 @@
+// Configuration sourced from environment variables to avoid hardcoded secrets.
+// Do not commit secrets into source code.
 
-const AWS_ACCESS_KEY_ID = "AKIAIMORHT6EXAMPLE"; // Trivy recognizes the AKIA pattern
-const AWS_SECRET_ACCESS_KEY = "wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY";
-
-export const githubConfig = {
-  // Trivy identifies GitHub Personal Access Tokens
-  token: "ghp_J9s8d7f6g5h4j3k2l1m0n9o8p7q6r5s4t3u2", 
-  owner: "my-org"
+export const AWS = {
+  accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+  secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
 };
 
-async function connectToDb() {
-  // Trivy flags connection strings with passwords
-  const dbUrl = "postgres://admin:p@ssword123@localhost:5432/mydb";
+export const githubConfig = {
+  // Provided via environment variables
+  token: process.env.GITHUB_TOKEN,
+  owner: process.env.GITHUB_OWNER || "my-org",
+};
+
+// Use an environment variable for the database connection string.
+// Example (do not commit): postgres://user:REPLACE_ME@localhost:5432/mydb
+export async function connectToDb(): Promise<string | undefined> {
+  const dbUrl = process.env.DATABASE_URL;
   return dbUrl;
 }
