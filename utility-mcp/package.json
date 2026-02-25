@@ -23,7 +23,7 @@
     "@mastra/mcp": "^0.13.3",
     "@modelcontextprotocol/sdk": "^1.19.1",
     "cross-env": "^10.1.0",
-    "dotenv": "^16.4.5",
+    "dotenv": "^17.0.0",
     "express": "^4.21.2",
     "langchain": "^0.3.35",
     "mcp-typescript-sdk": "^2.0.1",
