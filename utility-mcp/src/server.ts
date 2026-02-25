@@ -50,12 +50,17 @@ function createMcpServer(): McpServer {
             description: "Run Trivvy scan on the codebase, find issues",
             inputSchema: {
                 repoUrl: z.string().describe("git repo url to scan"),
+                branchName: z.string().describe("branch name to scan")
             },
         },
-        async ({ repoUrl }) => {
+        async ({ repoUrl, branchName }) => {
 
             const outputFileName = 'report.json';
-            const command = `trivy repo --scanners secret --format json --output ${outputFileName} ${repoUrl}`;
+            const command = `trivy repo --scanners secret --format json --output ${outputFileName} ${repoUrl} --branch ${branchName}`;
+            
+            if (!!branchName){
+                branchName = 'main';
+            }
 
             try {
                 console.log(`🔍 Starting Trivy scan for: ${repoUrl}...`);
