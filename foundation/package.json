@@ -22,7 +22,7 @@
         "scan": "cross-env trivy repo --scanners secret --format json --output report.json ."
     },
     "dependencies": {
-        "@elastic/elasticsearch": "^8.17.0",
+        "@elastic/elasticsearch": "^9.0.0",
         "@grpc/grpc-js": "^1.9.5",
         "@grpc/proto-loader": "^0.7.10",
         "@qdrant/js-client-rest": "^1.12.0",
